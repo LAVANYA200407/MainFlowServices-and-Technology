@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> landing page </title>
+    </head>    
+        <style >
+            *{ padding:0; margin:0;box-sizing:border-box;}
+            body{ 
+                background-image:url('https://wallup.net/wp-content/uploads/2017/03/29/494583-fox-animals-nature-wildlife.jpg');
+                width:100%;
+                height:100vh;
+                background-size:cover;
+                background-repeat:no-repeat ;
+                background-position:center;
+            }
+            nav{
+              height: 60px;
+              background-color:lightgrey ;
+              padding: 0;
+            }
+            .logo{
+              font-size: 2em;
+              letter-spacing: 2px;
+            }
+            .menu{
+               font-size: 20px;
+               text-align: center;
+            }
+            .menu ul{
+              display: inline flex;
+              list-style: none;
+              color: black;
+            }
+            .menu ul li{
+              width:100px;
+            }
+            .active,.menu ul li:hover{
+              background-color:rgb(143, 180, 225);
+              border-radius:3px;
+            }
+            .menu .fi{
+              margin-right:8px;
+            }
+            .sub-menu1{
+              display: none;
+            }            
+            .menu ul li:hover .sub-menu1{
+              display: block;
+              position:absolute;
+              background-color: chartreuse;
+              margin-top:15px;
+              margin-left:-15px;
+            }          
+            .menu ul li:hover .sub-menu1 ul{
+                display: block;
+                margin: 10px;
+              }          
+            .menu ul li:hover .sub-menu1 ul li{
+              width: 150px;
+              padding: 10px;
+              border-bottom:1px dotted white ;
+              border-radius: 0px;
+              text-align: left;
+            }         
+           .menu ul li:hover .sub-menu1 ul li a:hover{
+            background-color:indianred;
+           }
+           .h{
+            max-width: 650px;
+            position: absolute;
+            top: 400px;
+            left:650px ;
+            transform: translate(-800,-600);
+            text-align: center;
+            color: black;
+            transition: 0.4s;
+           }
+           .h a:hover{
+                background:transparent ;
+                border: 1px solid indianred;
+           }
+           .hspam{
+            font-size: 3.5em;
+           }
+           .h a{
+            text-decoration: none;
+            background-color: indianred;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+           }
+
+        </style>
+    
+    <body>
+       <nav>
+          <div class="logo"> Explore</div>
+          <div class="menu">
+            <ul>
+                <li><a class="active" href="a">Home</a></li>
+                <li><a href="#"><i class="fi fi-ts-angle-down"></i>animal</a>
+                  <div class="sub-menu1">
+                        <ul>
+                           <li><a href="C:\Users\A Lavanya\Pictures\main picture.png">info</a></li>
+                           <li><a href="C:\Users\A Lavanya\web\python\animal.jpg">pic1</a></li>
+                        </ul>
+                    </div>
+                </li>      
+               <li><a href="d.html">about</a></li>
+               <li><a href="c.html">contact</a></li>
+            </ul>   
+         </div>
+       </nav>
+        <section class="h">
+          <span>Enjoy</span>
+            <h1 > wild Explore</h1> 
+            <br>
+            <a href="#">visit now</a>
+            </section>
+    </body>
+</html>           
+
+        
+
+             

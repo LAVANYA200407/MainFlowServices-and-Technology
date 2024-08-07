@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <STYLE>
+        body{
+            font-family: Arial,  sans-serif;
+            background-color: rgb(57, 55, 55);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header{
+            background-color: white;
+            color:rgb(12, 11, 11);
+            padding: 0.3rem;
+            font-size: 15px;
+        }
+        section{
+            padding: 70px;
+        }
+        img{
+            max-width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        p{
+            line-height: 1.6;
+        }
+        footer{
+            color:white;
+            padding: 0.1rem;
+        }
+        #calculator{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            max-width: 300px;
+            margin:auto;
+            padding: 16px;
+            border:1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button{
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid rgb(24, 24, 24);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #display {
+            grid-column: span 4;
+            margin-bottom: 8px;
+            padding: 8px;
+            font-size: 20px;
+            text-align: right;
+            border: 1px soild #ccc;
+            border-radius: 4px;
+
+        }
+
+    </STYLE>
+</head>
+<body>
+    <header>
+        <h1> CALCULATOR</h1>
+    </header>
+    <SECTION>
+        <div id="calculator">
+            <div id="display"></div>
+            <button onclick="clearDisplay ()">C</button>
+            <button onclick="appendTODisplay ('7')">7</button>
+            <button onclick="appendTODisplay ('8')">8</button>
+            <button onclick="appendTODisplay ('9')">9</button>
+            <button onclick="appendTODisplay ('/')">/</button>
+            <button onclick="appendTODisplay ('4')">4</button>
+            <button onclick="appendTODisplay ('5')">5</button>
+            <button onclick="appendTODisplay ('6')">6</button>
+            <button onclick="appendTODisplay ('*')">*</button>
+            <button onclick="appendTODisplay ('1')">1</button>
+            <button onclick="appendTODisplay ('2')">2</button>
+            <button onclick="appendTODisplay ('3')">3</button>
+            <button onclick="appendTODisplay ('-')">-</button>
+            <button onclick="appendTODisplay ('0')">0</button>
+            <button onclick="calculateresult ()">=</button>
+            <button onclick="appendTODisplay ('+')">+</button>
+        </div>
+        <script>
+            let display = document.getElementById('display');
+            function appendTODisplay(value){
+                display.textContent += value;
+            }
+            function clearDisplay(){
+                display.textContent = '';
+            }
+            function calculateresult(){
+                try{
+                     display.textContent = eval (display.textContent);
+
+                } catch (error){
+                     display.textContent += value;
+                }
+            }
+        </script>
+    </SECTION>
+    
+</body>
+</html>

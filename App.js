@@ -1,17 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Login';
-import Signup from './Signup';
+import "bootstrap/dist/css/bootstrap.min.css"; 
+import MovieList from './MovieList';
 
-const App = () => {
+
+function App() {
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </Router>
+    <div> 
+      <nav className="navbar navbar-dark bg-dark">
+        <span className='navbar-brand mb-0 h1'>Movie Search App</span>
+      </nav>
+      <MovieList/>
+
+    
+    </div>
   );
-};
+}
 
 export default App;
